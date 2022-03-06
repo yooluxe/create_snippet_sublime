@@ -34,12 +34,18 @@ Let's make a new snippet that adds some HTML code & JS code to HTML, the `Yandex
               <!-- Yandex Map JS -->
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp" id="YandexMap"></script>
 
-         <script>your script here</script>
+         ```javascript {cmd="node"}
+	 
+	 ymaps.ready(init);
+function init(){var a=new ymaps.Map("YandexMap",{center:[50.436179,30.523],zoom:18,controls:[]},{searchControlProvider:"yandex#search"});window.matchMedia("(max-width: 1500px)").matches&&a.setCenter([50.436179,30.5215]);window.matchMedia("(max-width: 992px)").matches&&a.setCenter([50.436179,30.5218]);window.matchMedia("(max-width: 767px)").matches&&a.setCenter([50.436179,30.52]);myGeoObject=new ymaps.GeoObject({geometry:{type:"Point",coordinates:[50.4361,30.5199]},properties:{iconContent:"Lorem",hintContent:'\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u044f "Lorem"'}},
+{preset:"islands#blackStretchyIcon",draggable:!1});a.behaviors.disable("scrollZoom");a.geoObjects.add(myGeoObject)}; 
+
+	```
 	 
 		]]></content>
 		
 		<tabTrigger>Yandex_Map_JS</tabTrigger>
-		<scope>source.css, source.html, source.htm</scope>
+		<scope>index.html</scope>
 		
 	</snippet>
 	
@@ -51,7 +57,7 @@ Outside of the code that we need in the snippet there are two additional lines o
 
 `<scope> ... </scope>` this is optional. By putting in a source type, this will restrict the use of this snippet to that file type. 
 
-	<scope>source.css, source.html, source.htm</scope>
+	<scope>index.html</scope>
 
 ### Save the file
 You would think that this would be straight forward, but it's not. First you want to make sure that you are saving it in the proper directory
