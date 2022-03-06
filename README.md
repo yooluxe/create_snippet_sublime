@@ -1,7 +1,5 @@
 # How to create snippets in Sublime Text
 
-<img src="snippet.png">
-
 ### Create new snippet
 Create a new snippet, go to **Tools > Developer > New Snippet**
 
@@ -36,7 +34,7 @@ Let's make a new snippet that adds some HTML code & JS code to HTML, the `Yandex
               <!-- Yandex Map JS -->
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp" id="YandexMap"></script>
 
-         <script src="map.js"></script>
+         <script>your script here</script>
 	 
 		]]></content>
 		
