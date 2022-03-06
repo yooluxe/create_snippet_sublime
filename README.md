@@ -1,6 +1,6 @@
 # How to create snippets in Sublime Text
 
-<img src="sn.png">
+<img src="sn.jpg">
 
 ### Create new snippet
 Create a new snippet, go to **Tools > Developer > New Snippet**
