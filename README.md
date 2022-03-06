@@ -1,4 +1,4 @@
-<img src="sn.jpg">
+<img src="snippet.jpg">
 
 ### Create new snippet
 Create a new snippet, go to **Tools > Developer > New Snippet**
