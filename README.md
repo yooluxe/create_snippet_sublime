@@ -59,7 +59,7 @@ Outside of the code that we need in the snippet there are two additional lines o
 `<scope> ... </scope>` this is optional. By putting in a source type, this will restrict the use of this snippet to that file type. 
 
 	<scope>index.html</scope>
-
+	
 ### Save the file
 You would think that this would be straight forward, but it's not. First you want to make sure that you are saving it in the proper directory
 
