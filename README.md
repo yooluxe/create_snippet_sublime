@@ -1,5 +1,3 @@
-# How to create snippets in Sublime Text
-
 <img src="sn.jpg">
 
 ### Create new snippet
