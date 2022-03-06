@@ -58,7 +58,7 @@ To make this a snippet we could do this:
 ```	
 Outside of the code that we need in the snippet there are two additional lines of code.
 
-`<tabTrigger> svg_icons </tabTrigger>` is the string you will enter at any line in your project code and then hit the `tab` key. 
+`<tabTrigger> svg_icons </tabTrigger>` is the string you will enter at any line in your project code. 
 
 `<scope>index.html</scope>` this is optional. This will restrict the use of this snippet to that file type. 
 
