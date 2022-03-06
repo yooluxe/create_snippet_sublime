@@ -56,14 +56,11 @@ To make this a snippet we could do this:
   
 </snippet>
 ```	
-
 Outside of the code that we need in the snippet there are two additional lines of code.
 
-`<tabTrigger> svg_icons </tabTrigger>` is pretty self explanatory. 
-What you put in here is the string you will enter at any line in your project code and then hit the `tab` key. 
+`<tabTrigger> svg_icons </tabTrigger>` is the string you will enter at any line in your project code and then hit the `tab` key. 
 
-`<scope> ... </scope>` this is optional. By putting in a source type, this will restrict the use of this snippet to that file type. 
-<scope>index.html</scope>
+`<scope>index.html</scope>` this is optional. This will restrict the use of this snippet to that file type. 
 
 ### Save the file
 You would think that this would be straight forward, but it's not. First you want to make sure that you are saving it in the proper directory
