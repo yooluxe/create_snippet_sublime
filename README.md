@@ -1,5 +1,7 @@
 # How to create snippets in Sublime Text
 
+<img src="sn.png">
+
 ### Create new snippet
 Create a new snippet, go to **Tools > Developer > New Snippet**
 
@@ -22,44 +24,45 @@ The code for your new snippet will go between
 		Hello, ${1:this} is a ${2:snippet}.
 	]]></content>
 		
-Let's make a new snippet that adds some HTML code & JS code to HTML, the `yandex_map` rules for example. To make this a snippet we could do this:
+Let's make a new snippet that adds some HTML code & JS code to HTML file, the `svg_icons` rules for example. 
+To make this a snippet we could do this:
 
 ```
 <snippet>
-	
-		<content><![CDATA[	
-			
-			<!-- Yandex Map -->
-          <div id="YandexMap"></div>       
+  <content><![CDATA[
 
-              <!-- Yandex Map JS -->
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp" id="YandexMap"></script>
+  <!-- SVG icons -->
+    <script src="https://cdn.jsdelivr.net/npm/svg4everybody@2.1.9/dist/svg4everybody.min.js" onload="svg4everybody({})" async=""></script>
 
-         <script>ymaps.ready(init);
-function init(){var a=new ymaps.Map("YandexMap",{center:[50.436179,30.523],zoom:18,controls:[]},{searchControlProvider:"yandex#search"});window.matchMedia("(max-width: 1500px)").matches&&a.setCenter([50.436179,30.5215]);window.matchMedia("(max-width: 992px)").matches&&a.setCenter([50.436179,30.5218]);window.matchMedia("(max-width: 767px)").matches&&a.setCenter([50.436179,30.52]);myGeoObject=new ymaps.GeoObject({geometry:{type:"Point",coordinates:[50.4361,30.5199]},properties:{iconContent:"Lorem",hintContent:'\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u044f "Lorem"'}},
-{preset:"islands#blackStretchyIcon",draggable:!1});a.behaviors.disable("scrollZoom");a.geoObjects.add(myGeoObject)};           
-         </script>
-         
-		]]></content>
-		
-		<tabTrigger>yandex_map</tabTrigger>
-		
-		<scope>index.html</scope>
-		
+         <!-- SVG sprite -->
+  <svg display="none" xmlns="http://www.w3.org/2000/svg"></svg>
+
+  <symbol id="up" viewBox="0 0 20 20">
+    <path d="M10.36 7.785c-.2-.196-.52-.196-.718 0l-2.864 2.807c-.2.195-.198.514 0 .71.197.196.518.196.717 
+    0L10 9l2.506 2.302c.198.196.518.196.718 0 .197-.196.197-.515 0-.71L10.36 7.785zM10 .4C4.698.4.4 4.698.4 
+    10c0 5.303 4.298 9.6 9.6 9.6s9.6-4.297 9.6-9.6c0-5.302-4.298-9.6-9.6-9.6zm0 17.954c-4.615 0-8.354-3.74-8.354-8.354 
+    0-4.614 3.74-8.354 8.354-8.354 4.613 0 8.354 3.74 8.354 8.354 0 4.614-3.74 8.354-8.354 8.354z"/>
+  </symbol>
+
+     <!-- end SVG sprite -->
+
+     ]]></content>
+
+  <tabTrigger>svg_icons</tabTrigger>
+
+  <!-- <scope>index.html</scope> -->
+  
 </snippet>
-	
-```
-	
-Notice the indention of the CSS rules, I did that for a reason. White space will be represented in the output of the snippet. Test it out for yourself.
+```	
 
 Outside of the code that we need in the snippet there are two additional lines of code.
 
-`<tabTrigger> ... </tabTrigger>` is pretty self explanatory. What you put in here is the string you will enter at any line in your project code and then hit the `tab` key. 
+`<tabTrigger> svg_icons </tabTrigger>` is pretty self explanatory. What you put in here is the string you will enter at any line in your project code and then hit the `tab` key. 
 
 `<scope> ... </scope>` this is optional. By putting in a source type, this will restrict the use of this snippet to that file type. 
 
 	<scope>index.html</scope>
-	
+
 ### Save the file
 You would think that this would be straight forward, but it's not. First you want to make sure that you are saving it in the proper directory
 
@@ -73,7 +76,7 @@ When you hit the save button, notice that the file window simply says `untitled`
 ### Use the new snippet
 You are now ready to use your new snippet. So that this example works, be sure to open/create a `.css` file. Remember, we scoped this snippet to that file type. 
 
-Line one type in `Yandex_Map_JS` + `tab` and your snippet should appear.
+Line one type in `svg_icons` + `tab` and your snippet should appear.
 	
 ### Conclusion
 That's all! 
