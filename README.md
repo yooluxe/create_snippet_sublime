@@ -59,16 +59,16 @@ To make this a snippet we could do this:
 
 Outside of the code that we need in the snippet there are two additional lines of code.
 
-`<tabTrigger> svg_icons </tabTrigger>` is pretty self explanatory. What you put in here is the string you will enter at any line in your project code and then hit the `tab` key. 
+`<tabTrigger> svg_icons </tabTrigger>` is pretty self explanatory. 
+What you put in here is the string you will enter at any line in your project code and then hit the `tab` key. 
 
 `<scope> ... </scope>` this is optional. By putting in a source type, this will restrict the use of this snippet to that file type. 
-
-	<scope>index.html</scope>
+<scope>index.html</scope>
 
 ### Save the file
 You would think that this would be straight forward, but it's not. First you want to make sure that you are saving it in the proper directory
 
-	~/Library/Application Support/Sublime Text 2/Packages/User
+~/Library/Application Support/Sublime Text 2/Packages/User
 
 Then, I would suggest making sub-directories here, something like `snippets` and then organizing a sub-directory in there as well. Something like `snippets/css` for example. 
 
@@ -80,5 +80,4 @@ You are now ready to use your new snippet. So that this example works, be sure t
 
 Line one type in `svg_icons` + `tab` and your snippet should appear.
 	
-### Conclusion
 That's all! 
